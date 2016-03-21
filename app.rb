@@ -10,6 +10,12 @@ class RPS < Sinatra::Base
     erb :index
   end
 
+  # single player
+
+  get '/single' do
+    erb :single
+  end
+
   post '/name' do
     player = Player.new(params[:player_name])
     Game.start(Game.new(player))
@@ -33,6 +39,12 @@ class RPS < Sinatra::Base
   get '/result' do
     @player_choice = $player_choice
     erb :result
+  end
+
+  # multi player
+
+  get '/multi' do
+    erb :multi
   end
 
   # start the server if ruby file executed directly

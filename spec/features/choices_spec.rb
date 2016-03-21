@@ -1,6 +1,6 @@
 feature "Choices" do
   scenario "Have three choices to pick from" do
-    sign_in_and_play
+    sign_in_and_play_single_player
     expect(page).to have_button 'Rock'
     expect(page).to have_button 'Paper'
     expect(page).to have_button 'Scissors'
