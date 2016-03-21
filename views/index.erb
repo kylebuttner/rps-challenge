@@ -1,10 +1,10 @@
 <h1>Rock, Paper, Scissors</h1>
-<h2>Sign in to play!</h2>
+<h2>Choose a game type!</h2>
 
-<form action="/name" method="post">
-  <label for="player_name">
-    Enter your name
-  <input type="text" name="player_name">
-  <input type="submit" value="Start the game">
-  </label>
+<form action="/single" method="get">
+  <input type="submit" name="single_player" value="Alone">
+</form>
+
+<form action="/multi" method="get">
+  <input type="submit" name="multi_player" value="With a friend">
 </form>

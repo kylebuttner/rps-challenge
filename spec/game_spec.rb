@@ -1,8 +1,10 @@
 require 'game'
 
 describe Game do
-  subject(:game) { described_class.new(player) }
-  let(:player) { double(:player, name: "Kyle") }
+  subject(:game) { described_class.new(player1, player2 = :computer) }
+  let(:player1) { double(:player, name: "Kyle") }
+  let(:player2) { double(:player, name: "Fred") }
+
 
   describe 'Game#start' do
     it 'should initiate new game' do

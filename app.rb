@@ -10,9 +10,24 @@ class RPS < Sinatra::Base
     erb :index
   end
 
+  get '/single' do
+    erb :single
+  end
+
+  get '/multi' do
+    erb :multi
+  end
+
   post '/name' do
     player = Player.new(params[:player_name])
     Game.start(Game.new(player))
+    redirect 'play'
+  end
+
+  post '/names' do
+    player1 = Player.new(params[:player_1_name])
+    player2 = Player.new(params[:player_2_name])
+    Game.start(Game.new(player1, player2))
     redirect 'play'
   end
 

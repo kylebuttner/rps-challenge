@@ -12,8 +12,9 @@ class Game
     @current_game
   end
 
-  def initialize(player)
-    @player = player
+  def initialize(player1, player2 = :computer)
+    @player1 = player1
+    @player2 = player2
   end
 
   def player_choice=(choice)
